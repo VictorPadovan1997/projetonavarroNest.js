@@ -15,7 +15,7 @@ export class JogadoresController {
         await this.jogadoresService.criarAtualizarJogador(criaJogadorDto)
     }
 
-    @Get() //localhost:3000/api/v1/jogadores?email=2@2.com
+    @Get()
     async consultarJogadores(   
         @Query('email') email: string): Promise<Jogador[] | Jogador> {
             if (email) {
